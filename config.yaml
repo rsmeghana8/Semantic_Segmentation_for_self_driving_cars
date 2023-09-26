@@ -1,0 +1,10 @@
+artifacts_root:
+  artifacts
+
+data_ingestion:
+  root_dir: /media/Ubuntu/meg/mlprojects/Semantic_Segmentation_for_self_driving_cars/archive
+
+prepare_callbacks:
+  root_dir: artifacts/callbacks
+  tensorboard_root_log_dir: artifacts/callbacks/tensorboard_log_dir
+  checkpoint_model_filepath: artifacts/callbacks/checkpoints
