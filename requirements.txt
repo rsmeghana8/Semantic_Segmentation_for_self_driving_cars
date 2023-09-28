@@ -1,4 +1,6 @@
-#tensorflow==2.12
+--extra-index-url https://pypi.ngc.nvidia.com
+
+tensorflow
 pandas
 dvc
 notebook

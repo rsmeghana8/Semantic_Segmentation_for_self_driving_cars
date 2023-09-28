@@ -30,14 +30,14 @@ def upsampling_block(expansive_input, contractive_input,n_filters=32):
     merge = tf.concat([up,contractive_input],axis =3)
 
 
-    layer = Conv2D(n_filters, kernel_size= 3, activation='relu', padding='same',
+    layer = Conv2D(n_filters, kernel_size= 3, padding='same',
                  kernel_initializer= 'he_normal')(merge)
-    layer = BatchNormalization(axis=3)(layer, training= False)
+    layer = BatchNormalization(axis=3)(layer, training= True)
     layer = LeakyReLU() (layer)
 
-    layer = Conv2D(n_filters, kernel_size= 3, activation='relu', padding='same',
+    layer = Conv2D(n_filters, kernel_size= 3, padding='same',
                  kernel_initializer= 'he_normal')(layer)
-    layer = BatchNormalization(axis=3)(layer, training= False)
+    layer = BatchNormalization(axis=3)(layer, training= True)
     layer = LeakyReLU() (layer)
 
     return layer

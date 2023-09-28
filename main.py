@@ -37,7 +37,8 @@ class DataIngestionTrainingPipeline:
               metrics=['accuracy'])
         
         model.fit(train, validation_data=val, epochs=1, callbacks=callback_list)
-
+        model.save('Model.h5')
+        
 if __name__ == "__main__":
 
     try:

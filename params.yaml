@@ -1,9 +1,9 @@
 EPOCHS: 1
 VAL_SUBSPLITS: 5
 BUFFER_SIZE: 500
-BATCH_SIZE: 32
+BATCH_SIZE: 64
 img_height : 192
 img_width : 256
 num_channels :  3
 input_size: [192,256,3]
-n_classes: 1
+n_classes: 13

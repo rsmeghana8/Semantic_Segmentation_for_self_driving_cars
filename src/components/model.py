@@ -7,7 +7,7 @@ from src.config.configuration import PrepareModelConfig
 class PrepareModel:
     def __init__(self, config: PrepareModelConfig):
         self.config = config
-        self.input_size = self.config.input_size
+        self.input_size = tuple(self.config.input_size)
         self.n_classes = self.config.n_classes
 
 
@@ -36,7 +36,7 @@ class PrepareModel:
         ublock9 = upsampling_block(ublock8, cblock1[1], n_filters)
     
         layer = Conv2D(n_filters, 3, padding='same', kernel_initializer='he_normal')(ublock9)
-        layer = BatchNormalization(axis =3)(layer, training=False)
+        layer = BatchNormalization(axis =3)(layer, training= True)
         layer = LeakyReLU()(layer)
     
         layer = Conv2D(n_classes, 1, padding='same')(layer)

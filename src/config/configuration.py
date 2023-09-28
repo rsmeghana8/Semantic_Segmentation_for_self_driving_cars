@@ -60,6 +60,7 @@ class ConfigurationManager:
 
         prepare_model_config = PrepareModelConfig(
                             input_size = config.input_size,
-                            n_classes= config.n_classes)
+                            n_classes= config.n_classes,
+                            )
         return prepare_model_config
     
