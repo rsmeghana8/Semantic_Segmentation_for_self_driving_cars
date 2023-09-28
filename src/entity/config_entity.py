@@ -20,4 +20,8 @@ class PrepareCallbackConfig:
 class PrepareModelConfig:
     input_size: tuple
     n_classes: int
+
+@dataclass(frozen=True)
+class TrainingConfig:
+    epochs: int
  

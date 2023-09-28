@@ -1,6 +1,6 @@
 from src.constants import *
 from src.utils.common import read_yaml,create_directories
-from src.entity.config_entity import DataIngestionConfig, PrepareCallbackConfig, PrepareModelConfig, DataPreprocessingConfig
+from src.entity.config_entity import DataIngestionConfig, PrepareCallbackConfig, PrepareModelConfig, DataPreprocessingConfig, TrainingConfig
 
 
 class ConfigurationManager:
@@ -63,4 +63,13 @@ class ConfigurationManager:
                             n_classes= config.n_classes,
                             )
         return prepare_model_config
+    
+    def get_training_config(self)-> TrainingConfig:
+        config = self.params
+
+
+        prepare_training_config = PrepareModelConfig(
+                            epochs = config.EPOCHS,
+                            )
+        return prepare_training_config
     

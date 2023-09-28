@@ -31,13 +31,14 @@ class DataIngestionTrainingPipeline:
 
         prepare_model_config = config.get_prepare_model_config()
         prepare_model = PrepareModel(prepare_model_config)
+        training_config = config.get_training_config()
         model = prepare_model.unet_model()
         model.compile(optimizer=tf.keras.optimizers.Adam(),
                     loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
         
-        model.fit(train, validation_data=val, epochs=1, callbacks=callback_list)
-        model.save('Model.h5')
+        model.fit(train, validation_data=val, epochs= training_config.epochs , callbacks=callback_list)
+        model.save('model.h5')
         
 if __name__ == "__main__":
 
