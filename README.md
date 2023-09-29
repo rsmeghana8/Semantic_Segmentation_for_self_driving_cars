@@ -36,9 +36,14 @@ when trained for 50 epochs the model got the following results
 
 Let's look at the Training and Val accuracy plots
 
-![Train Accuracy](https://github.com/rsmeghana8/Semantic_Segmentation_for_self_driving_cars/assets/57563443/63439468-45c0-435f-bb4a-ec368134aa77)
+#### Train Accuracy
 
-![Val Accuracy](https://github.com/rsmeghana8/Semantic_Segmentation_for_self_driving_cars/assets/57563443/0c00201a-7043-4932-9dd2-f39c77ced25c)
+<img src="https://github.com/rsmeghana8/Semantic_Segmentation_for_self_driving_cars/assets/57563443/63439468-45c0-435f-bb4a-ec368134aa77"  width = '300'>
+
+#### Val Accuracy
+
+<img src="https://github.com/rsmeghana8/Semantic_Segmentation_for_self_driving_cars/assets/57563443/0c00201a-7043-4932-9dd2-f39c77ced25c" width="300">
+
 
 
 
